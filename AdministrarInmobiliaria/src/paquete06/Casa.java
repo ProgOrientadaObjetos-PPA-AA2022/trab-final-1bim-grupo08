@@ -6,7 +6,7 @@ import paquete04.Ciudad;
 import paquete05.Constructora;
 
 
-public class Casa {
+public class Casa implements Serializable{
     private Propietario propietario;
     private double precioMetroCuadrado;
     private double metrosCuadrados;

@@ -93,7 +93,7 @@ public class ArchivoLecturaBarrio {
     }
     @Override
     public String toString() {
-        String cadena = "Propietarios\n";
+        String cadena = "Barrios\n";
         for (int i = 0; i < barrios.size(); i++) {
             Barrio b = barrios.get(i);
             cadena = String.format("%s(%d) %s-%s\n", cadena,
