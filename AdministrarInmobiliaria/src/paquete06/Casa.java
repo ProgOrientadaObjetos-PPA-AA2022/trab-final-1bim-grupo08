@@ -78,7 +78,7 @@ public class Casa implements Serializable{
     public void establecerConstructora(Constructora n){
         constructora = n;
     }
-    public Constructora obtenerConstructora(){
+    public Constructora obtenerConstructoras(){
         return constructora;
     }
     

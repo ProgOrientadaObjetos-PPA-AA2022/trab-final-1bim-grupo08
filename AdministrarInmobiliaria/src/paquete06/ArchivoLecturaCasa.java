@@ -7,7 +7,7 @@ public class ArchivoLecturaCasa {
     private ObjectInputStream entrada;
     private ArrayList<Casa> casas;
     private String nombreArchivo;
-    private String identificador;
+    
     
     public ArchivoLecturaCasa(String n) {
         nombreArchivo = n;
@@ -46,11 +46,7 @@ public class ArchivoLecturaCasa {
     public void establecerNombreArchivo(String n) {
         nombreArchivo = n;
     }
-    
-    public void establecerIdentificador(String n) {
-        identificador = n;
-    }
-    
+   
     
     
     public ArrayList<Casa> obtenerCasas() {
@@ -61,9 +57,7 @@ public class ArchivoLecturaCasa {
         return nombreArchivo;
     }
     
-    public String obtenerIdentificador() {
-        return identificador;
-    }
+    
         
     
     @Override
@@ -71,7 +65,7 @@ public class ArchivoLecturaCasa {
         String cadena = "Casas\n";
         for (int i = 0; i < casas.size(); i++) {
             Casa ca = casas.get(i);
-            cadena = String.format(cadena = String.format("%s(%d) Informacion casa:\n"
+            cadena = String.format("%s(%d) Informacion casa:\n"
                     + "PROPIETARIO\n"
                     + "\tNombres: %s Apellidos: %s Identificacion: %s\n"
                     + "DETALLES\n"
@@ -82,11 +76,11 @@ public class ArchivoLecturaCasa {
                     + "\tNombre Ciudad: %s Nombre Provincia: %s \n"
                     + "CONSTRUCTORA\n"
                     + "\tNombre Constructora: %s Id Empresa: %s\n", cadena,(i + 1),
-                    ca.obtenerPropietario().obtenerNombre(),ca.obtenerPropietario().obtenerApellido(), ca.obtenerPropietario().obtenerIdentificacion(),
-                    ca.obtenerPrecioMetroCuadrado(), ca.obtenerNumeroMetrosCuadrados(),ca.obtenerNumeroCuartos(),ca.obtenerCostoFinal(),
-                    ca.obtenerBarrio().obtenerNombreBarrio(), ca.obtenerBarrio().obtenerReferencia(),
-                    ca.obtenerCiudad().obtenerNombreCiudad(), ca.obtenerCiudad().obtenerNombreProvincia(),
-                    ca.obtenerConstructoras().obtenerNombreConstructora(), ca.obtenerConstructora().obtenerId()););
+                    casas.get(i).obtenerPropietario().obtenerNombre(),casas.get(i).obtenerPropietario().obtenerApellido(), casas.get(i).obtenerPropietario().obtenerIdentificacion(),
+                    casas.get(i).obtenerPrecioMetroCuadrado(), casas.get(i).obtenerNumeroMetrosCuadrados(),casas.get(i).obtenerNumeroCuartos(),casas.get(i).obtenerCostoFinal(),
+                    casas.get(i).obtenerBarrio().obtenerNombreBarrio(), casas.get(i).obtenerBarrio().obtenerReferencia(),
+                    casas.get(i).obtenerCiudad().obtenerNombreCiudad(), casas.get(i).obtenerCiudad().obtenerNombreProvincia(),
+                    casas.get(i).obtenerConstructoras().obtenerNombreConstructora(), casas.get(i).obtenerConstructoras().obtenerId());
         }
 
         return cadena;

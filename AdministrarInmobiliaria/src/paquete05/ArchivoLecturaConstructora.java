@@ -77,7 +77,7 @@ public class ArchivoLecturaConstructora {
         }
     }
     
-    public ArrayList<Constructora> obtenerConstructora() {
+    public ArrayList<Constructora> obtenerConstructoras() {
         return constructoras;
     }
 
