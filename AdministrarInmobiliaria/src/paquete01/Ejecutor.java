@@ -158,17 +158,17 @@ public class Ejecutor {
         String nombreArchivo = "datos/propietarios.dat";
         System.out.println("Ingrese identifiacion del propietario: ");
         identificacion = sc.nextLine();
-        System.out.println("1");
+        
         Propietario propietarioEncontrado;
-        System.out.println("2");
+        
         ArchivoLecturaPropietario lecturaP = new ArchivoLecturaPropietario(nombreArchivo);
-        System.out.println("3");
+        
         lecturaP.establecerIdentificador(identificacion);
-        System.out.println("4");
+        
         lecturaP.establecerPropietarioBuscado();
-        System.out.println("5");
+        
         propietarioEncontrado = lecturaP.obtenerPropietarioBuscado();
-        System.out.println("6");
+        
         if (propietarioEncontrado != null) {
             System.out.printf("Propietario encontrado %s\n", propietarioEncontrado);
             return propietarioEncontrado;
