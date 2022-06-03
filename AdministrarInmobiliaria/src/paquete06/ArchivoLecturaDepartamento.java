@@ -62,7 +62,7 @@ public class ArchivoLecturaDepartamento {
                     + "PROPIETARIO\n"
                     + "\tNombres: %s Apellidos: %s Identificacion: %s\n"
                     + "ESPECIFICACIONES\n"
-                    + "\tNombre Edificio: %s Ubicación Edificio: %s\n"
+                    + "\tNombre Edificio: %s Ubicación en el Edificio: %s\n"
                     + "\tPrecio por metro cuadrado: %.2f Numero de metros cuadrados: %.2f\n"
                     + "\tValor Alícuota Mensual: %.2f Costo final: %.2f\n"
                     + "BARRIO\n"

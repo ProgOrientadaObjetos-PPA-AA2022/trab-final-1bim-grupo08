@@ -1,5 +1,5 @@
-
 package paquete01;
+
 import java.util.Scanner;
 import paquete02.*;
 import paquete03.*;
@@ -8,9 +8,10 @@ import paquete05.*;
 import paquete06.*;
 
 public class Ejecutor {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String nombreEdificio; 
+        String nombreEdificio;
         String ubicacionEdificio;
         Propietario propietario;
         Barrio barrio;
@@ -54,9 +55,9 @@ public class Ejecutor {
                     sc.nextLine();
                     System.out.println("Ingrese el nombre del edificio: ");
                     nombreEdificio = sc.nextLine();
-                    System.out.println("Ingrese la ubicacion del edificio: ");
+                    System.out.println("Ingrese la ubicacion en el edificio: ");
                     ubicacionEdificio = sc.nextLine();
-                    Departamento departamento = new Departamento(propietario,precioMetroCuadrado,metrosCuadrados,valorAlicuota,barrio,ciudad,nombreEdificio,ubicacionEdificio,constructora);
+                    Departamento departamento = new Departamento(propietario, precioMetroCuadrado, metrosCuadrados, valorAlicuota, barrio, ciudad, nombreEdificio, ubicacionEdificio, constructora);
                     departamento.establecerValorFinal();
                     ArchivoEscrituraDepartamento archivodepar = new ArchivoEscrituraDepartamento("datos/departamentos.dat");
                     archivodepar.establecerRegistro(departamento);
@@ -97,7 +98,7 @@ public class Ejecutor {
                     archivociu.establecerSalida();
                     break;
                 case 6:
-                    
+
                     System.out.println("Ingrese nombre de la constructora: ");
                     String nombreConstructora = sc.nextLine();
                     System.out.println("Ingrese id de la constructora:");
@@ -108,10 +109,10 @@ public class Ejecutor {
                     archivocons.establecerSalida();
                     break;
                 case 7:
-                    do {                        
+                    do {
                         op = menu2();
                         mostrar(op);
-                    } while (op!=0);
+                    } while (op != 0);
                     op = 7;
                     break;
                 case 0:
@@ -119,7 +120,8 @@ public class Ejecutor {
             }
         } while (op != 0);
     }
-     public static int menu() {
+
+    public static int menu() {
         Scanner sc = new Scanner(System.in);
         int op;
         System.out.println("-------------------------------------+");
@@ -135,7 +137,8 @@ public class Ejecutor {
         op = sc.nextInt();
         return op;
     }
-     public static int menu2() {
+
+    public static int menu2() {
         Scanner sc = new Scanner(System.in);
         int op;
         System.out.println("--------------------------------------+");
@@ -150,6 +153,7 @@ public class Ejecutor {
         op = sc.nextInt();
         return op;
     }
+
     public static Propietario encontrarPropietarioBuscado() {
         Scanner sc = new Scanner(System.in);
         String identificacion;
@@ -158,17 +162,17 @@ public class Ejecutor {
         String nombreArchivo = "datos/propietarios.dat";
         System.out.println("Ingrese identifiacion del propietario: ");
         identificacion = sc.nextLine();
-        
+
         Propietario propietarioEncontrado;
-        
+
         ArchivoLecturaPropietario lecturaP = new ArchivoLecturaPropietario(nombreArchivo);
-        
+
         lecturaP.establecerIdentificador(identificacion);
-        
+
         lecturaP.establecerPropietarioBuscado();
-        
+
         propietarioEncontrado = lecturaP.obtenerPropietarioBuscado();
-        
+
         if (propietarioEncontrado != null) {
             System.out.printf("Propietario encontrado %s\n", propietarioEncontrado);
             return propietarioEncontrado;
@@ -314,5 +318,5 @@ public class Ejecutor {
                 lecturaco.cerrarArchivo();
                 break;
         }
-    } 
+    }
 }
