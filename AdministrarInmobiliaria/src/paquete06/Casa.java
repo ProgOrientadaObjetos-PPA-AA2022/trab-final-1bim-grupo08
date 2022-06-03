@@ -6,7 +6,7 @@ import paquete04.Ciudad;
 import paquete05.Constructora;
 
 
-public class Casa {
+public class Casa implements Serializable{
     private Propietario propietario;
     private double precioMetroCuadrado;
     private double metrosCuadrados;
@@ -78,7 +78,7 @@ public class Casa {
     public void establecerConstructora(Constructora n){
         constructora = n;
     }
-    public Constructora obtenerConstructora(){
+    public Constructora obtenerConstructoras(){
         return constructora;
     }
     
