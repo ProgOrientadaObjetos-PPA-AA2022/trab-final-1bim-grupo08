@@ -5,10 +5,13 @@
  */
 package paquete01;
 
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
  */
 public class Ejecutor {
+    Scanner entry = new Scanner(System.in);
     
 }
