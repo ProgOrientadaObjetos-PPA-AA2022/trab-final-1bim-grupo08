@@ -97,19 +97,20 @@ public class Ejecutor {
                     archivociu.establecerSalida();
                     break;
                 case 6:
+                    
                     System.out.println("Ingrese nombre de la constructora: ");
                     String nombreConstructora = sc.nextLine();
                     System.out.println("Ingrese id de la constructora:");
                     String idEmpresa = sc.nextLine();
-                    constructora = new Constructora(nombreConstructora, idEmpresa);
+                    Constructora c1 = new Constructora(nombreConstructora, idEmpresa);
                     ArchivoEscrituraConstructora archivocons = new ArchivoEscrituraConstructora("datos/constructoras.dat");
-                    archivocons.establecerRegistro(constructora);
+                    archivocons.establecerRegistro(c1);
                     archivocons.establecerSalida();
                     break;
                 case 7:
                     do {                        
                         op = menu2();
-                        mostrarListas(op);
+                        mostrar(op);
                     } while (op!=0);
                     op = 7;
                     break;
@@ -140,7 +141,7 @@ public class Ejecutor {
         System.out.println("--------------------------------------+");
         System.out.println("1)Obervar Lista casas:                |");
         System.out.println("2)Obervar Lista departamentos:        |");
-        System.out.println("3)Obervar Lista propietarios:     |");
+        System.out.println("3)Obervar Lista propietarios:         |");
         System.out.println("4)Obervar Lista barrios:              |");
         System.out.println("5)Obervar Lista ciudades:             |");
         System.out.println("6)Obervar Lista constructoras:        |");
@@ -157,11 +158,17 @@ public class Ejecutor {
         String nombreArchivo = "datos/propietarios.dat";
         System.out.println("Ingrese identifiacion del propietario: ");
         identificacion = sc.nextLine();
+        System.out.println("1");
         Propietario propietarioEncontrado;
+        System.out.println("2");
         ArchivoLecturaPropietario lecturaP = new ArchivoLecturaPropietario(nombreArchivo);
+        System.out.println("3");
         lecturaP.establecerIdentificador(identificacion);
+        System.out.println("4");
         lecturaP.establecerPropietarioBuscado();
+        System.out.println("5");
         propietarioEncontrado = lecturaP.obtenerPropietarioBuscado();
+        System.out.println("6");
         if (propietarioEncontrado != null) {
             System.out.printf("Propietario encontrado %s\n", propietarioEncontrado);
             return propietarioEncontrado;
@@ -268,7 +275,7 @@ public class Ejecutor {
         }
     }
 
-    public static void mostrarListas(int op2) {
+    public static void mostrar(int op2) {
         switch (op2) {
             case 1:
                 ArchivoLecturaCasa lecturac = new ArchivoLecturaCasa("datos/casas.dat");

@@ -42,8 +42,8 @@ public class ArchivoEscrituraDepartamento {
     }
     
     public void establecerDepartamentos() {
-        ArchivoEscrituraDepartamento d = new ArchivoEscrituraDepartamento(nombreArchivo);
-        d.establecerDepartamentos();
+        ArchivoLecturaDepartamento d = new ArchivoLecturaDepartamento(nombreArchivo);
+        d.establecerDepartamento();
         departamentos = d.obtenerDepartamentos();
     }
     

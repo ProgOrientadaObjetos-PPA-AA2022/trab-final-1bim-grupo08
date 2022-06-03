@@ -52,19 +52,22 @@ public class ArchivoLecturaPropietario {
     public void establecerPropietarioBuscado() {
         
         File f = new File(nombreArchivo);
-
+        System.out.println("5");
         while (true) {
-            
+            System.out.println("6");
             if (f.exists()) {
                 
                 try {
                     Propietario registro = (Propietario) entrada.readObject();
+                    
                     if(registro.obtenerIdentificacion().equals(identificador)){
+                        
                         propietarioBuscado = registro;
+                        
                         break;
                     }
                 } catch (EOFException endOfFileException) {
-                    break;
+                    return;
                 } catch (IOException ex) {
                     System.out.println("Error al leer el archivo");
                 } catch (ClassNotFoundException ex) {

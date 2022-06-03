@@ -41,8 +41,8 @@ public class ArchivoEscrituraConstructora {
         registro = n;
     }
     
-    public void establecerConstructoras() {
-        ArchivoEscrituraConstructora co = new ArchivoEscrituraConstructora(nombreArchivo);
+    public void establecerConstructoras() { 
+        ArchivoLecturaConstructora co = new ArchivoLecturaConstructora(nombreArchivo); 
         co.establecerConstructoras();
         constructoras = co.obtenerConstructoras();
     }

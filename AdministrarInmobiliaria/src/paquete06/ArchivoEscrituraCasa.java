@@ -42,9 +42,9 @@ public class ArchivoEscrituraCasa {
     }
     
     public void establecerCasas() {
-        ArchivoEscrituraCasa co = new ArchivoEscrituraCasa(nombreArchivo);
-        co.establecerCasas();
-        casas = co.obtenerCasas();
+        ArchivoLecturaCasa ca = new ArchivoLecturaCasa(nombreArchivo);
+        ca.establecerCasa();
+        casas = ca.obtenerCasas();
     }
     
     public String obtenerNombreArchivo() {
